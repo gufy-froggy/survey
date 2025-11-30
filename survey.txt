@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>성공하는 비즈니스 모델 개발 - 만족도 설문조사</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+    h2 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+  <h2>성공하는 비즈니스 모델 개발 - 만족도 설문조사</h2>
+  <form>
+    <!-- 1. 성별 -->
+    <div class="question">
+      <label>1. 성별을 선택해주세요 (양자택일)</label><br />
+      <input type="radio" name="gender" value="male" /> 남성<br />
+      <input type="radio" name="gender" value="female" /> 여성
+    </div>
+
+    <!-- 2. 학년 분포 -->
+    <div class="question">
+      <label>2. 현재 본인의 학년을 선택해주세요 (선다형)</label><br />
+      <select name="grade">
+        <option value="1">1학년</option>
+        <option value="2">2학년</option>
+        <option value="3">3학년</option>
+        <option value="4">4학년</option>
+        <option value="5+">5학년 이상</option>
+      </select>
+    </div>
+
+    <!-- 3. 온라인 강의 장소 (다중 선택 2개까지) -->
+    <div class="question">
+      <label>3. 온라인 강의를 주로 어디서 청취하십니까? (중복 2개 선택 가능)</label><br />
+      <input type="checkbox" name="place" value="home" /> 집<br />
+      <input type="checkbox" name="place" value="library" /> 도서관<br />
+      <input type="checkbox" name="place" value="cafe" /> 카페<br />
+      <input type="checkbox" name="place" value="dorm" /> 기숙사<br />
+      <input type="checkbox" name="place" value="other" /> 기타
+    </div>
+
+    <!-- 4. 청취 시간대 -->
+    <div class="question">
+      <label>4. 온라인 강의를 주로 청취하는 시간대를 선택해주세요 (선다형)</label><br />
+      <select name="time">
+        <option value="0-6">0 ~ 6시</option>
+        <option value="6-12">6 ~ 12시</option>
+        <option value="12-18">12 ~ 18시</option>
+        <option value="18-24">18 ~ 24시</option>
+      </select>
+    </div>
+
+    <!-- 5. 5~10주차 강의 중 좋았던 순위 (순위형) -->
+    <div class="question">
+      <label>5. 5~10주차 강의 중 좋았던 강의 순위를 매겨주세요 (순위형)</label><br />
+      <p>각 항목에 1~6 중 하나를 입력하세요 (중복 X)</p>
+      <input type="number" name="week5" min="1" max="6" /> 5주차 강의<br />
+      <input type="number" name="week6" min="1" max="6" /> 6주차 강의<br />
+      <input type="number" name="week7" min="1" max="6" /> 7주차 강의<br />
+      <input type="number" name="week8" min="1" max="6" /> 8주차 강의<br />
+      <input type="number" name="week9" min="1" max="6" /> 9주차 강의<br />
+      <input type="number" name="week10" min="1" max="6" /> 10주차 강의
+    </div>
+
+    <!-- 6. 창업 관련 과목 수강 횟수 -->
+    <div class="question">
+      <label>6. 지금까지 창업 관련 과목을 몇 번 수강했나요? (선다형)</label><br />
+      <select name="startup_classes">
+        <option value="0">0번</option>
+        <option value="1">1번</option>
+        <option value="2">2번</option>
+        <option value="3+">3번 이상</option>
+      </select>
+    </div>
+
+    <!-- 7. 창업 관심도 -->
+    <div class="question">
+      <label>7. 창업에 대한 관심도를 선택해주세요 (척도형)</label><br />
+      <input type="range" min="1" max="5" /> (1 = 관심 없음, 5 = 매우 관심 있음)
+    </div>
+
+    <!-- 8. 졸업 후 창업 의도 -->
+    <div class="question">
+      <label>8. 졸업 후 창업 의도를 선택해주세요 (척도형)</label><br />
+      <input type="range" min="1" max="5" /> (1 = 전혀 없음, 5 = 매우 있음)
+    </div>
+
+    <!-- 9. 과목 전반 만족도 -->
+    <div class="question">
+      <label>9. 본 과목에 대한 전반적인 만족도를 선택해주세요 (척도형)</label><br />
+      <input type="range" min="1" max="5" /> (1 = 매우 불만족, 5 = 매우 만족)
+    </div>
+
+    <!-- 10. 개선 의견 -->
+    <div class="question">
+      <label>10. 본 과목에서 개선했으면 하는 점을 자유롭게 작성해주세요 (자유응답형)</label><br />
+      <textarea name="opinion" rows="5" cols="50"></textarea>
+    </div>
+
+    <button type="submit">제출하기</button>
+  </form>
+</body>
+</html>
